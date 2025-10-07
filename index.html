@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kathleen Gomis - Sophrologie à La Châtre</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <img src="bg-sophro.jpg" alt="" class="header-bg">
+        <h1 class="site-title">☀️ Kathleen Gomis 🌙</h1>
+        <p class="sophro-certif">
+            <span style="font-size:1.05em; color:#fff; background:#c99a2e; font-weight:bold; padding:4px 14px; border-radius:8px; box-shadow:0 2px 8px rgba(212,175,55,0.12); letter-spacing:0.5px;">
+                Sophrologue certifié au Centre Européen de Formation
+            </span>
+            <span style="margin-left:8px; font-size:1.1em;">🎓✨</span>
+        </p>
+        <blockquote class="site-quote">
+            <span>« On dit souvent que nous ne croyons que ce que nous voyons mais si, en réalité, nous ne voyons que ce que nous croyons ? »</span>
+        </blockquote>
+    </div>
+
+    <div class="container">
+        <button class="cta-button" onclick="openModal()">📅 PRENDRE RENDEZ-VOUS</button>
+
+        <div class="section">
+            <h2>Qu'est-ce que la Sophrologie ?</h2>
+            <p>La sophrologie est une méthode psychocorporelle qui combine des exercices de respiration, de relaxation musculaire et de visualisation positive. Créée dans les années 1960, elle vise à harmoniser le corps et l'esprit pour améliorer votre bien-être au quotidien.</p>
+            <p>Cette pratique douce et accessible à tous vous permet de développer vos propres capacités à gérer le stress, les émotions, et à retrouver un équilibre intérieur durable.</p>
+            <p style="color:#b85c00; font-size:1.08em; font-style:italic; margin-top:10px;">
+                Cette technique peut venir en complément d'un suivi médical ou psychologique, mais ne se substitue jamais à une thérapie ou à un accompagnement par un médecin.
+            </p>
+            
+            <div class="benefits">
+                <div class="benefit-card">
+                    <h3>🧘‍♀️ Gestion du Stress & Douleurs</h3>
+                    <p>Apprenez à vous détendre, à évacuer les tensions quotidiennes et à soulager les douleurs chroniques (endométriose, etc.).</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>😴 Meilleur Sommeil</h3>
+                    <p>Retrouvez un sommeil réparateur et de qualité</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>💪 Confiance en Soi</h3>
+                    <p>Renforcez votre estime personnelle et vos capacités</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>🎯 Concentration</h3>
+                    <p>Améliorez votre focus et votre clarté mentale</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💰 Mes Tarifs</h2>
+            <p>En tant que sophrologue certifiée, j'accompagne chaque personne de manière individuelle selon ses besoins spécifiques. Découvrez mes tarifs transparents pour des séances en visioconférence.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card individual">
+                    <div class="pricing-icon">🌺</div>
+                    <h3>Séance Individuelle</h3>
+                    <div class="pricing-price">15€</div>
+                    <div class="pricing-duration">30 minutes</div>
+                    <ul class="pricing-features">
+                        <li>Séance personnalisée en visio</li>
+                        <li>Exercices adaptés à vos besoins</li>
+                        <li>Suivi et conseils</li>
+                        <li>Paiement après la séance</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card pack-starter">
+                    <div class="pricing-icon">🧘</div>
+                    <h3>Pack Découverte</h3>
+                    <div class="pricing-price">40€</div>
+                    <div class="pricing-duration">3 séances de 30min</div>
+                    <div class="pricing-savings">🎁 Économisez 5€</div>
+                    <ul class="pricing-features">
+                        <li>3 séances personnalisées</li>
+                        <li>Programme d'initiation</li>
+                        <li>Exercices à pratiquer chez vous</li>
+                        <li>Suivi entre les séances</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card pack-wellness popular">
+                    <div class="pricing-badge">⭐ POPULAIRE</div>
+                    <div class="pricing-icon">🌿</div>
+                    <h3>Pack Bien-être</h3>
+                    <div class="pricing-price">70€</div>
+                    <div class="pricing-duration">5 séances de 30min</div>
+                    <div class="pricing-savings">🎁 Économisez 5€</div>
+                    <ul class="pricing-features">
+                        <li>5 séances personnalisées</li>
+                        <li>Programme complet sur 1 mois</li>
+                        <li>Techniques avancées</li>
+                        <li>Bilan de progression</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pricing-info">
+                <p><strong>💳 Paiement :</strong> Virement, PayPal ou espèces</p>
+                <p><strong>📅 Réservation :</strong> Séances planifiées selon vos disponibilités</p>
+                <p><strong>❌ Annulation :</strong> Gratuite jusqu'à 24h avant</p>
+            </div>
+
+            <div class="testimonials">
+                <h3 style="color: #c99a2e; text-align: center; margin-bottom: 20px;">Témoignages</h3>
+                <form id="testimonialForm" class="testimonial-form">
+                    <span class="testimonial-icon">👤</span>
+                    <input type="text" id="testimonialName" placeholder="Votre prénom (facultatif)" style="padding:8px 12px; border-radius:8px; border:1px solid #e8d4b8; margin-right:10px;">
+                    <input type="text" id="testimonialText" placeholder="Votre avis" required style="padding:8px 12px; border-radius:8px; border:1px solid #e8d4b8; width:55%; margin-right:10px;">
+                    <button type="submit" class="testimonial-btn">Ajouter</button>
+                </form>
+                <button id="adminLoginBtn" onclick="toggleAdminPanel()" style="margin-bottom:16px; background:#ffe066; color:#7a5230; border:none; border-radius:8px; padding:8px 18px; font-weight:bold; cursor:pointer;">🔧 Administration</button>
+                <div id="testimonialsList">
+                    <!-- Témoignages dynamiques ici -->
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Pour qui ?</h2>
+            <div class="benefits">
+                <div class="benefit-card">
+                    <h3>👩‍⚕️ Douleurs chroniques & endométriose</h3>
+                    <p>Accompagnement pour soulager les douleurs chroniques, notamment liées à l’endométriose, et améliorer la qualité de vie au quotidien.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>👨‍👩‍👧‍👦 Public concerné</h3>
+                    <p>Hommes, femmes, enfants à partir de 4-5 ans. Séances adaptées à chaque âge et situation.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>🏫 &nbsp;Milieu scolaire</h3>
+                    <p>Interventions en écoles, collèges, lycées pour la gestion du stress, des émotions et la préparation aux examens.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>💼 &nbsp;Milieu professionnel</h3>
+                    <p>Gestion du stress, prévention du burn-out, amélioration du bien-être au travail et accompagnement des équipes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💻 Rendez-vous en visio</h2>
+            <div class="location">
+                <p>Pour le moment, les séances se déroulent uniquement en visioconférence sur la plateforme <strong>Zoom</strong></p>
+                <p style="margin-top: 15px;">Séances individuelles sur rendez-vous</p>
+            </div>
+        </div>
+
+        <button class="cta-button" onclick="openModal()">📅 RÉSERVER MA SÉANCE</button>
+
+        <div class="footer">
+            <p>Kathleen Gomis - Sophrologue Certifiée</p>
+            <p>Prendre soin de soi, c'est s'offrir le meilleur 🌸</p>
+        </div>
+    </div>
+
+    <!-- Panel d'administration -->
+    <div id="adminPanel" class="admin-panel">
+        <div class="admin-content">
+            <div class="admin-header">
+                <h2>🔧 Administration</h2>
+                <button class="close-admin" onclick="toggleAdminPanel()">×</button>
+            </div>
+            
+            <!-- Authentification simple -->
+            <div id="adminLogin" class="admin-login">
+                <h3>Connexion</h3>
+                <input type="password" id="adminPassword" placeholder="Mot de passe" style="padding:10px; border-radius:8px; border:1px solid #e8d4b8; width:200px; margin-right:10px;">
+                <button onclick="adminAuthenticate()" style="padding:10px 20px; background:#c99a2e; color:white; border:none; border-radius:8px; cursor:pointer;">Se connecter</button>
+            </div>
+            
+            <!-- Interface d'administration -->
+            <div id="adminInterface" class="admin-interface" style="display:none;">
+                <!-- Statistiques -->
+                <div class="admin-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="totalAppointments">0</span>
+                        <span class="stat-label">Demandes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="pendingAppointments">0</span>
+                        <span class="stat-label">En attente</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="totalTestimonials">0</span>
+                        <span class="stat-label">Témoignages</span>
+                    </div>
+                </div>
+                
+                <!-- Onglets -->
+                <div class="admin-tabs">
+                    <button class="admin-tab active" onclick="showAdminTab('appointments')">Rendez-vous</button>
+                    <button class="admin-tab" onclick="showAdminTab('testimonials')">Témoignages</button>
+                </div>
+                
+                <!-- Contenu -->
+                <div id="adminAppointments" class="admin-tab-content active">
+                    <div id="appointmentsList"></div>
+                </div>
+                
+                <div id="adminTestimonials" class="admin-tab-content">
+                    <div id="adminTestimonialsList"></div>
+                </div>
+                
+                <button onclick="adminLogout()" style="margin-top:20px; padding:8px 16px; background:#dc3545; color:white; border:none; border-radius:6px; cursor:pointer;">Déconnexion</button>
+            </div>
+        </div>
+    </div>
+
+        <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>📅 Prendre Rendez-vous</h2>
+            <p>Choisissez votre méthode de contact préférée :</p>
+            
+            <!-- Choix de la méthode -->
+            <div class="contact-methods">
+                <div class="method-choice">
+                    <input type="radio" id="methodDatabase" name="contactMethod" value="database" checked>
+                    <label for="methodDatabase">
+                        <span class="method-icon">💾</span>
+                        <span class="method-title">Formulaire sécurisé</span>
+                        <span class="method-desc">Vos données sont enregistrées, je vous recontacte rapidement</span>
+                    </label>
+                </div>
+                
+                <div class="method-choice">
+                    <input type="radio" id="methodSMS" name="contactMethod" value="sms">
+                    <label for="methodSMS">
+                        <span class="method-icon">📱</span>
+                        <span class="method-title">Ouvrir Messages</span>
+                        <span class="method-desc">Ouvre votre app Messages avec le message pré-écrit</span>
+                    </label>
+                </div>
+            </div>
+            
+            <form id="appointmentForm" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label for="name">Votre nom *</label>
+                    <input type="text" id="name" required placeholder="Prénom et nom">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Votre numéro de téléphone *</label>
+                    <input type="tel" id="phone" required placeholder="06 12 34 56 78">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message (optionnel)</label>
+                    <input type="text" id="message" placeholder="Motif de consultation, disponibilités...">
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">📱 Envoyer ma demande</button>
+            </form>
+            
+            <div id="successMessage" class="success-message" style="display: none;">
+                <span class="success-icon">✅</span>
+                <p>Votre demande a été enregistrée avec succès !<br>Je vous recontacterai très rapidement.</p>
+            </div>
+        </div>
+    </div>    <script src="main.js"></script>
+</body>
+<footer class="legal-footer">
+    <small style="color: #222;">
+        Mentions légales : Ce site ne doit pas être copié. Les données personnelles sont sécurisées.
+    </small>
+</footer>
+</html>
+    <script src="main.js"></script>
+</body>
+</html>
+
+        <footer class="legal-footer">
+            <small>
+                Mentions légales : Kathleen Gomis, Sophrologue certifiée. SIRET : 123 456 789 00012. Adresse : 12 rue de la Paix, 36400 La Châtre. Contact : kathleen.gomis@email.com. Ce site ne collecte aucune donnée personnelle à des fins commerciales. Hébergement : GitHub Pages.
+            </small>
+        </footer>
