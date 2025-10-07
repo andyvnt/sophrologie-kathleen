@@ -665,6 +665,5 @@ async function initDefaultTestimonials() {
 
 // Initialiser les témoignages par défaut au chargement
 setTimeout(initDefaultTestimonials, 2000);
-// (vérifie que toutes les fonctions utilisent window.firebase pour Firestore)
 
 

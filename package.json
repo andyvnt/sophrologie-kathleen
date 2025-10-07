@@ -1,0 +1,7 @@
+{
+  "name": "sophrologie-site",
+  "version": "1.0.0",
+  "dependencies": {
+    "firebase": "^12.3.0"
+  }
+}
