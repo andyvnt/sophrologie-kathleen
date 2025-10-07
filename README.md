@@ -7,7 +7,7 @@
 - Design responsive
 
 ## 🚀 Hébergement
-Site hébergé gratuitement sur GitHub Pages avec Firebase pour la base de données.
+Site hébergé gratuitement sur GitHub Pages pour la base de données.
 
 ## 🔧 Configuration
 Voir le guide de configuration dans SETUP.md
