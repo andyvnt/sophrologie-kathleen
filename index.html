@@ -9,8 +9,9 @@
 </head>
 <body>
     <div class="header">
-        <img src="bg-sophro.jpg" alt="" class="header-bg">
+        <img src="./bg-sophro.jpg" alt="" class="header-bg">
         <h1 class="site-title">☀️ Kathleen Gomis 🌙</h1>
+        <button class="cta-button" id="openRdvModal" style="margin-bottom:20px;">📅 Prendre rendez-vous</button>
         <p class="sophro-certif">
             <span style="font-size:1.05em; color:#fff; background:#c99a2e; font-weight:bold; padding:4px 14px; border-radius:8px; box-shadow:0 2px 8px rgba(212,175,55,0.12); letter-spacing:0.5px;">
                 Sophrologue certifié au Centre Européen de Formation
@@ -21,10 +22,8 @@
             <span>« On dit souvent que nous ne croyons que ce que nous voyons mais si, en réalité, nous ne voyons que ce que nous croyons ? »</span>
         </blockquote>
     </div>
-
+    
     <div class="container">
-        <button class="cta-button" onclick="openModal()">📅 PRENDRE RENDEZ-VOUS</button>
-
         <div class="section">
             <h2>Qu'est-ce que la Sophrologie ?</h2>
             <p>La sophrologie est une méthode psychocorporelle qui combine des exercices de respiration, de relaxation musculaire et de visualisation positive. Créée dans les années 1960, elle vise à harmoniser le corps et l'esprit pour améliorer votre bien-être au quotidien.</p>
@@ -107,17 +106,42 @@
                 <p><strong>❌ Annulation :</strong> Gratuite jusqu'à 24h avant</p>
             </div>
 
+            <!-- Témoignages dynamiques supprimés, remplace par témoignages statiques -->
             <div class="testimonials">
                 <h3 style="color: #c99a2e; text-align: center; margin-bottom: 20px;">Témoignages</h3>
-                <form id="testimonialForm" class="testimonial-form">
-                    <span class="testimonial-icon">👤</span>
-                    <input type="text" id="testimonialName" placeholder="Votre prénom (facultatif)" style="padding:8px 12px; border-radius:8px; border:1px solid #e8d4b8; margin-right:10px;">
-                    <input type="text" id="testimonialText" placeholder="Votre avis" required style="padding:8px 12px; border-radius:8px; border:1px solid #e8d4b8; width:55%; margin-right:10px;">
-                    <button type="submit" class="testimonial-btn">Ajouter</button>
-                </form>
-                <button id="adminLoginBtn" onclick="toggleAdminPanel()" style="margin-bottom:16px; background:#ffe066; color:#7a5230; border:none; border-radius:8px; padding:8px 18px; font-weight:bold; cursor:pointer;">🔧 Administration</button>
+                
+                <!-- Conteneur pour les témoignages -->
                 <div id="testimonialsList">
-                    <!-- Témoignages dynamiques ici -->
+                    <!-- Témoignages par défaut -->
+                    <div class="testimonial">
+                        <strong>Marie L.</strong>
+                        <p>Les séances avec Kathleen m'ont permis de retrouver une sérénité que je pensais avoir perdue. Je recommande vivement !</p>
+                    </div>
+                    <div class="testimonial">
+                        <strong>Thomas B.</strong>
+                        <p>Approche douce et bienveillante, j'ai appris des techniques que j'utilise maintenant au quotidien.</p>
+                    </div>
+                </div>
+                
+                <!-- Formulaire pour ajouter un témoignage -->
+                <div style="background:#fefdf8; border:2px solid #c99a2e; border-radius:12px; padding:20px; margin-top:20px;">
+                    <h4 style="color:#7a5230; margin-bottom:15px; text-align:center;">✍️ Partagez votre expérience</h4>
+                    <form id="testimonialForm">
+                        <div style="margin-bottom:15px;">
+                            <input type="text" id="testimonialName" placeholder="Votre prénom (optionnel)" 
+                                   style="width:100%; padding:10px; border:1px solid #e8d4b8; border-radius:8px; font-size:1em;">
+                        </div>
+                        <div style="margin-bottom:15px;">
+                            <textarea id="testimonialText" placeholder="Votre avis sur les séances de sophrologie..." required
+                                      rows="4" style="width:100%; padding:10px; border:1px solid #e8d4b8; border-radius:8px; font-size:1em; resize:vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" style="width:100%;">
+                            Ajouter mon témoignage
+                        </button>
+                    </form>
+                    <p style="font-size:0.9em; color:#8b6f47; margin-top:10px; text-align:center;">
+                        Votre témoignage apparaîtra directement sur la page
+                    </p>
                 </div>
             </div>
         </div>
@@ -151,133 +175,168 @@
                 <p style="margin-top: 15px;">Séances individuelles sur rendez-vous</p>
             </div>
         </div>
-
-        <button class="cta-button" onclick="openModal()">📅 RÉSERVER MA SÉANCE</button>
-
-        <div class="footer">
-            <p>Kathleen Gomis - Sophrologue Certifiée</p>
-            <p>Prendre soin de soi, c'est s'offrir le meilleur 🌸</p>
-        </div>
     </div>
 
-    <!-- Panel d'administration -->
-    <div id="adminPanel" class="admin-panel">
-        <div class="admin-content">
-            <div class="admin-header">
-                <h2>🔧 Administration</h2>
-                <button class="close-admin" onclick="toggleAdminPanel()">×</button>
-            </div>
-            
-            <!-- Authentification simple -->
-            <div id="adminLogin" class="admin-login">
-                <h3>Connexion</h3>
-                <input type="password" id="adminPassword" placeholder="Mot de passe" style="padding:10px; border-radius:8px; border:1px solid #e8d4b8; width:200px; margin-right:10px;">
-                <button onclick="adminAuthenticate()" style="padding:10px 20px; background:#c99a2e; color:white; border:none; border-radius:8px; cursor:pointer;">Se connecter</button>
-            </div>
-            
-            <!-- Interface d'administration -->
-            <div id="adminInterface" class="admin-interface" style="display:none;">
-                <!-- Statistiques -->
-                <div class="admin-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" id="totalAppointments">0</span>
-                        <span class="stat-label">Demandes</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" id="pendingAppointments">0</span>
-                        <span class="stat-label">En attente</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" id="totalTestimonials">0</span>
-                        <span class="stat-label">Témoignages</span>
-                    </div>
-                </div>
+    <!-- Modal RDV (doit être en dehors de .container et avant </body>
+    <div id="rdvModal" class="modal" style="display:none;">
+        <div class="modal-content" style="max-width:400px;">
+            <span class="close" id="closeRdvModal" style="float:right; font-size:1.8em; cursor:pointer;">&times;</span>
+            <h2 style="text-align:center;">📅 Prendre rendez-vous</h2>
+            <form id="rdvForm" style="margin:20px auto;">
+                <input type="text" id="rdvFirstName" placeholder="Votre prénom" required style="padding:10px; border-radius:8px; border:1px solid #e8d4b8; width:100%; margin-bottom:10px;">
+                <input type="text" id="rdvLastName" placeholder="Votre nom" required style="padding:10px; border-radius:8px; border:1px solid #e8d4b8; width:100%; margin-bottom:10px;">
+                <input type="tel" id="rdvPhone" placeholder="Votre téléphone" required style="padding:10px; border-radius:8px; border:1px solid #e8d4b8; width:100%; margin-bottom:10px;">
+                <textarea id="rdvMessage" placeholder="Message (obligatoire)" required style="padding:10px; border-radius:8px; border:1px solid #e8d4b8; width:100%; margin-bottom:10px;"></textarea>
                 
-                <!-- Onglets -->
-                <div class="admin-tabs">
-                    <button class="admin-tab active" onclick="showAdminTab('appointments')">Rendez-vous</button>
-                    <button class="admin-tab" onclick="showAdminTab('testimonials')">Témoignages</button>
-                </div>
-                
-                <!-- Contenu -->
-                <div id="adminAppointments" class="admin-tab-content active">
-                    <div id="appointmentsList"></div>
-                </div>
-                
-                <div id="adminTestimonials" class="admin-tab-content">
-                    <div id="adminTestimonialsList"></div>
-                </div>
-                
-                <button onclick="adminLogout()" style="margin-top:20px; padding:8px 16px; background:#dc3545; color:white; border:none; border-radius:6px; cursor:pointer;">Déconnexion</button>
-            </div>
-        </div>
-    </div>
-
-        <div id="appointmentModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>📅 Prendre Rendez-vous</h2>
-            <p>Choisissez votre méthode de contact préférée :</p>
-            
-            <!-- Choix de la méthode -->
-            <div class="contact-methods">
-                <div class="method-choice">
-                    <input type="radio" id="methodDatabase" name="contactMethod" value="database" checked>
-                    <label for="methodDatabase">
-                        <span class="method-icon">💾</span>
-                        <span class="method-title">Formulaire sécurisé</span>
-                        <span class="method-desc">Vos données sont enregistrées, je vous recontacte rapidement</span>
+                <div style="margin:15px 0; padding:10px; background:#f8f9fa; border-radius:8px; border:1px solid #e8d4b8;">
+                    <label style="display:flex; align-items:flex-start; cursor:pointer; font-size:0.9em; color:#555;">
+                        <input type="checkbox" id="rdvLegalConsent" required style="margin-right:8px; margin-top:2px; cursor:pointer;" />
+                        <span>J'accepte que mes données personnelles soient collectées et traitées dans le cadre de ma demande de rendez-vous. Ces données ne seront pas partagées avec des tiers et seront utilisées uniquement pour le suivi de ma demande. <em style="color:#7a5230;">*Obligatoire</em></span>
                     </label>
                 </div>
                 
-                <div class="method-choice">
-                    <input type="radio" id="methodSMS" name="contactMethod" value="sms">
-                    <label for="methodSMS">
-                        <span class="method-icon">📱</span>
-                        <span class="method-title">Ouvrir Messages</span>
-                        <span class="method-desc">Ouvre votre app Messages avec le message pré-écrit</span>
-                    </label>
-                </div>
-            </div>
-            
-            <form id="appointmentForm" onsubmit="submitForm(event)">
-                <div class="form-group">
-                    <label for="name">Votre nom *</label>
-                    <input type="text" id="name" required placeholder="Prénom et nom">
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Votre numéro de téléphone *</label>
-                    <input type="tel" id="phone" required placeholder="06 12 34 56 78">
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message (optionnel)</label>
-                    <input type="text" id="message" placeholder="Motif de consultation, disponibilités...">
-                </div>
-                
-                <button type="submit" class="submit-btn" id="submitBtn">📱 Envoyer ma demande</button>
+                <button type="button" id="rdvBtn" class="cta-button" style="width:100%;">Envoyer la demande</button>
             </form>
-            
-            <div id="successMessage" class="success-message" style="display: none;">
-                <span class="success-icon">✅</span>
-                <p>Votre demande a été enregistrée avec succès !<br>Je vous recontacterai très rapidement.</p>
+            <div id="rdvInfo" style="display:none; margin-top:20px; text-align:center;">
+                <p id="rdvInfoText" style="font-size:1.05em; color:#b85c00;"></p>
             </div>
+            <p style="font-size:0.95em; color:#888; text-align:center;">Après validation, le SMS sera prêt à être envoyé à <strong style="color:#b85c00;">06 22 12 67 46</strong>.</p>
         </div>
-    </div>    <script src="firebase-config.js" type="module"></script>
-    <script src="main.js"></script>
-</body>
-<footer class="legal-footer">
-    <small style="color: #222;">
-        Mentions légales : Ce site ne doit pas être copié. Les données personnelles sont sécurisées.
-    </small>
-</footer>
-</html>
-</body>
-</html>
+    </div>
 
-        <footer class="legal-footer">
-            <small>
-                Mentions légales : Kathleen Gomis, Sophrologue certifiée. Ce site ne doit pas être copié. Les données personnelles sont sécurisées.
-            </small>
-        </footer>
+    <footer style="background:#f9f6f0; padding:20px; margin-top:40px; text-align:center; border-top:1px solid #e8d4b8;">
+        <div style="text-align:center; margin-bottom:20px;">
+            <button class="cta-button" onclick="document.getElementById('openRdvModal').click()">📅 Prendre rendez-vous</button>
+        </div>
+        
+        <div style="color:#7a5230; font-size:1em; font-weight:bold; margin-bottom:8px;">
+            Mentions légales : Ce site ne doit pas être copié. Les données personnelles sont sécurisées.
+        </div>
+        <div style="color:#8b6f47; font-size:0.95em;">
+            Kathleen Gomis, Sophrologue certifiée, 36400 La Châtre.<br>
+            Site édité à titre informatif, aucune donnée médicale n'est conservée.
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Modal RDV
+        document.getElementById('openRdvModal').onclick = function() {
+            document.getElementById('rdvModal').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('rdvModal').classList.add('show');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+            document.getElementById('rdvForm').style.display = 'block';
+            document.getElementById('rdvInfo').style.display = 'none';
+            document.getElementById('rdvForm').reset();
+        };
+
+        document.getElementById('closeRdvModal').onclick = function() {
+            document.getElementById('rdvModal').classList.remove('show');
+            setTimeout(() => {
+                document.getElementById('rdvModal').style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 300);
+        };
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('rdvModal')) {
+                document.getElementById('rdvModal').classList.remove('show');
+                setTimeout(() => {
+                    document.getElementById('rdvModal').style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 300);
+            }
+        };
+
+        // Validation du formulaire RDV
+        document.getElementById('rdvBtn').onclick = function() {
+            const firstName = document.getElementById('rdvFirstName').value.trim();
+            const lastName = document.getElementById('rdvLastName').value.trim();
+            const phone = document.getElementById('rdvPhone').value.trim();
+            const message = document.getElementById('rdvMessage').value.trim();
+            const legalConsent = document.getElementById('rdvLegalConsent').checked;
+            
+            if (!firstName || !lastName || !phone || !message) {
+                alert("Merci de remplir tous les champs obligatoires.");
+                return;
+            }
+            
+            if (!legalConsent) {
+                alert("Vous devez accepter les conditions de traitement des données personnelles pour continuer.");
+                return;
+            }
+            
+            document.getElementById('rdvForm').style.display = 'none';
+            document.getElementById('rdvInfo').style.display = 'block';
+            document.getElementById('rdvInfoText').textContent = "Votre demande a été enregistrée. Kathleen vous recontactera rapidement.";
+        };
+
+        // Gestion ULTRA SIMPLE des témoignages avec protection d'erreur
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                const testimonialForm = document.getElementById('testimonialForm');
+                
+                if (testimonialForm) {
+                    testimonialForm.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        
+                        try {
+                            const nameInput = document.getElementById('testimonialName');
+                            const textInput = document.getElementById('testimonialText');
+                            
+                            if (!nameInput || !textInput) {
+                                alert("Erreur: Formulaire incomplet");
+                                return;
+                            }
+                            
+                            const name = nameInput.value.trim() || 'Anonyme';
+                            const text = textInput.value.trim();
+                            
+                            if (!text) {
+                                alert("Merci d'écrire votre avis.");
+                                return;
+                            }
+                            
+                            // Créer le nouveau témoignage
+                            const testimonialDiv = document.createElement('div');
+                            testimonialDiv.className = 'testimonial';
+                            testimonialDiv.innerHTML = `
+                                <strong>${name}</strong>
+                                <p>${text}</p>
+                            `;
+                            
+                            // Ajouter au début de la liste
+                            const testimonialsList = document.getElementById('testimonialsList');
+                            if (testimonialsList) {
+                                testimonialsList.insertBefore(testimonialDiv, testimonialsList.firstChild);
+                                
+                                // Réinitialiser le formulaire
+                                testimonialForm.reset();
+                                
+                                // Message de confirmation
+                                alert("✅ Merci pour votre témoignage ! Il est maintenant visible. 😊");
+                            } else {
+                                alert("Erreur: Impossible d'afficher le témoignage");
+                            }
+                            
+                        } catch (error) {
+                            console.error('Erreur testimonial:', error);
+                            alert("Une erreur est survenue. Merci de réessayer.");
+                        }
+                    });
+                } else {
+                    console.log('Formulaire testimonial non trouvé');
+                }
+            } catch (error) {
+                console.error('Erreur initialisation testimonials:', error);
+            }
+        });
+    </script>
+</body>
+</html>

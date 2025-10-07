@@ -67,3 +67,39 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers de développement
+*.log
+.env
+
+# Dossiers de build
+build/
+dist/
+
+# Fichiers temporaires
+*.tmp
+*.temp
+
+# Fichiers IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Fichiers Firebase locaux
+.firebase/
+firebase-debug.log
+firestore-debug.log
+
+# Fichiers serveur (pas nécessaires pour GitHub Pages)
+server.js
+package.json
+public/package-lock.json

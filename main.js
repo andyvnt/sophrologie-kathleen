@@ -665,6 +665,25 @@ async function initDefaultTestimonials() {
 
 // Initialiser les témoignages par défaut au chargement
 setTimeout(initDefaultTestimonials, 2000);
-// (vérifie que toutes les fonctions utilisent window.firebase pour Firestore)
+
+// Dans la gestion du modal RDV, supprime toute référence à rdvSmsBtn et à l'émoji 📱
+        // Validation du formulaire RDV (étape 2)
+        document.getElementById('rdvBtn').onclick = function() {
+            const firstName = document.getElementById('rdvFirstName').value.trim();
+            const lastName = document.getElementById('rdvLastName').value.trim();
+            const phone = document.getElementById('rdvPhone').value.trim();
+            const message = document.getElementById('rdvMessage').value.trim();
+            if (!firstName || !lastName || !phone || !message) {
+                alert("Merci de remplir tous les champs obligatoires.");
+                return;
+            }
+            let smsBody = `Bonjour Kathleen,\nJe souhaite prendre rendez-vous pour une séance de sophrologie.\nPrénom : ${firstName}\nNom : ${lastName}\nTéléphone : ${phone}\nMessage : ${message}\nMerci de me recontacter.`;
+            document.getElementById('rdvForm').style.display = 'none';
+            document.getElementById('rdvInfo').style.display = 'block';
+
+            // Affiche juste le texte d'information, plus de bouton SMS
+            document.getElementById('rdvInfoText').textContent =
+                "Votre demande a été enregistrée. Kathleen vous recontactera rapidement.";
+        };
 
 
