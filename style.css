@@ -352,6 +352,8 @@ body {
     max-width: 500px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     animation: fadeInUp 0.5s ease;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .close {
@@ -1061,6 +1063,8 @@ body {
         padding: 20px;
         border-radius: 15px;
         max-width: 95%;
+        max-height: 90vh;
+        overflow-y: auto;
     }
     
     .contact-methods {
@@ -1144,6 +1148,8 @@ body {
     .modal-content {
         margin: 5px;
         padding: 15px;
+        max-height: 90vh;
+        overflow-y: auto;
     }
     
     .cta-button {

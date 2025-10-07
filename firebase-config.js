@@ -1,17 +1,16 @@
 // Configuration Firebase (vous devrez remplacer par vos clés)
 const firebaseConfig = {
-  // Vous remplacerez ces valeurs par les vôtres lors du setup Firebase
-  apiKey: "VOTRE_API_KEY",
-  authDomain: "VOTRE_PROJECT_ID.firebaseapp.com",
-  projectId: "VOTRE_PROJECT_ID",
-  storageBucket: "VOTRE_PROJECT_ID.appspot.com",
-  messagingSenderId: "VOTRE_SENDER_ID",
-  appId: "VOTRE_APP_ID"
+  apiKey: "AIzaSyBvskH9IAntRkujshsZqjMucWKdiQamARg",
+  authDomain: "sophro-kath.firebaseapp.com",
+  projectId: "sophro-kath",
+  storageBucket: "sophro-kath.appspot.com",
+  messagingSenderId: "728288035587",
+  appId: "1:728288035587:web:dc0995719f4377699f1f36"
 };
 
 // Initialisation Firebase
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
-import { getFirestore, collection, addDoc, getDocs, doc, updateDoc, query, where, orderBy } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, doc, updateDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -22,9 +21,9 @@ window.firebase = {
   collection,
   addDoc,
   getDocs,
-  doc,
-  updateDoc,
   query,
   where,
-  orderBy
+  orderBy,
+  doc,
+  updateDoc
 };
