@@ -76,17 +76,10 @@ package-lock.json
 .DS_Store
 Thumbs.db
 
-# Fichiers de développement
-*.log
-.env
-
-# Dossiers de build
-build/
-dist/
-
 # Fichiers temporaires
 *.tmp
 *.temp
+*.log
 
 # Fichiers IDE
 .vscode/
@@ -94,12 +87,19 @@ dist/
 *.swp
 *.swo
 
-# Fichiers Firebase locaux
+# Fichiers Firebase (pas nécessaires pour Netlify)
+firebase.json
+firestore.rules
+firestore.indexes.json
 .firebase/
 firebase-debug.log
-firestore-debug.log
 
-# Fichiers serveur (pas nécessaires pour GitHub Pages)
+# Fichiers serveur (pas nécessaires pour Netlify)
 server.js
 package.json
-public/package-lock.json
+package-lock.json
+node_modules/
+
+# Fichiers avec caractères invalides
+*#*
+*?*
