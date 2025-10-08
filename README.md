@@ -1,34 +1,34 @@
 # Site de Sophrologie - Kathleen Gomis
 
-Site web professionnel pour les services de sophrologie de Kathleen Gomis.
+Site web professionnel pour les services de sophrologie de Kathleen Gomis à La Châtre.
 
 ## 🌟 Fonctionnalités
 
 - Présentation des services de sophrologie
-- Tarifs transparents
+- Tarifs transparents (15€ à 70€)
 - Système de prise de rendez-vous
-- Témoignages clients
-- Design responsive
+- Témoignages clients interactifs
+- Design responsive et moderne
 
-## 🚀 Déploiement
+## 🚀 Site en ligne
 
-Site déployé sur GitHub Pages : [https://votre-username.github.io/sophrologie-site](https://votre-username.github.io/sophrologie-site)
+**[https://sophrologie-kathleen.netlify.app](https://sophrologie-kathleen.netlify.app)**
 
 ## 📧 Contact
 
 **Kathleen Gomis**  
-Sophrologue certifiée  
+Sophrologue certifiée au Centre Européen de Formation  
 📍 36400 La Châtre  
 📞 06 22 12 67 46  
 ✉️ kathleen.gomis@gmail.com
 
-## 💻 Technologies
+## 💻 Services
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-- Design responsive
+- **Séance Individuelle** : 15€ (30min)
+- **Pack Découverte** : 40€ (3 séances)
+- **Pack Bien-être** : 70€ (5 séances)
+
+Toutes les séances se déroulent en visioconférence sur Zoom.
 
 ---
-© 2024 Kathleen Gomis - Tous droits réservés
 © 2024 Kathleen Gomis - Tous droits réservés

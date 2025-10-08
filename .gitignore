@@ -87,17 +87,17 @@ Thumbs.db
 *.swp
 *.swo
 
-# Fichiers Firebase (pas nécessaires pour Netlify)
-firebase.json
-firestore.rules
-firestore.indexes.json
-.firebase/
-firebase-debug.log
+# Fichiers Node.js (pas nécessaires pour site statique)
+node_modules/
+package*.json
 
-# Fichiers serveur (pas nécessaires pour Netlify)
+# Fichiers Firebase (supprimés pour Netlify)
+firebase.json
+firestore.*
+.firebase/
+
+# Fichiers serveur (pas nécessaires)
 server.js
-package.json
-package-lock.json
 node_modules/
 
 # Fichiers avec caractères invalides
